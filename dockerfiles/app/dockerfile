@@ -1,0 +1,13 @@
+FROM centos:8
+WORKDIR /
+
+# install system dependencies and R
+RUN dnf groupinstall -y "Development Tools"
+RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+RUN dnf config-manager --set-enabled PowerTools
+RUN dnf install -y R
+
+CMD \
+	# cd /app && \
+	# Rscript installPackages.r && \
+	tail -f /dev/null

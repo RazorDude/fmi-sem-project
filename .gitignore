@@ -1,0 +1,5 @@
+data
+dockerfiles/.env
+dockerfiles/docker-compose.yaml
+Rplots*
+.~lock.R_Project_71539.docx#

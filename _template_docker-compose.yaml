@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build: ./app
+    container_name: fmi_sem_app_container
+    volumes:
+      - '/path/to/project/on/local/machine:/app'
+      - '/tmp/.X11-unix:/tmp/.X11-unix'
+      - '$HOME/.Xauthority:/root/.Xauthority:rw'
+    environment:
+      - DISPLAY=unix$DISPLAY
+    network_mode: host
